@@ -1,9 +1,11 @@
 # Pattern_2_1_Calculator_with_Adapter
-1.2: Структурные шаблоны. Adapter, Proxy, Decorator, Facade, Flyweight
+1.2: Структурные шаблоны. Adapter, Proxy, Decorator, Facade, Flyweight  
+Применение шаблона Adapter.
+
 # Задача Калькулятор
 
 ## Описание
-В этом задании попрактикуемся с шаблоном *Adapter* (*Адаптер*). Ниже вам дан готовый класс калькулятора:
+В этом задании попрактикуемся с шаблоном *Adapter* (*Адаптер*). Необходимо взять стандартный класс калькулятора,
 
 ```java
 public class Calculator {
@@ -12,7 +14,7 @@ public class Calculator {
   }
 
   public static enum Operation {
-    SUM, SUB, MULT, DIV, POW;
+    // ваш код
   }
 
   public static class Formula {
@@ -22,13 +24,13 @@ public class Calculator {
 
     public Formula addOperand(double operand) {
       if (a == null) {
-        a = operand;
+       // ваш код
       } else if (b == null) {
-        b = operand;
+        // ваш код
       } else {
         throw new IllegalStateException("Formula is full of operands");
       }
-      return this;
+      // ваш код
     }
 
     public Formula calculate(Operation op) {
@@ -38,15 +40,8 @@ public class Calculator {
         case SUM:
           result = a + b;
           break;
-        case SUB:
-          result = a - b;
-          break;
-        case MULT:
-          result = a * b;
-          break;
-        case DIV:
-          result = a / b;
-          break;
+        // ваш код
+        
         case POW:
           result = Math.pow(a, b);
           break;
